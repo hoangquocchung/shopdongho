@@ -1,0 +1,21 @@
+﻿@model List<KetNoiCSDL.EF.Menu>
+<ul class="menuleft dnTablet-l">
+    @foreach (var item in Model)
+    {
+        <li><a href="@item.Link" title="@item.Text" target="@item.Target">@item.Text</a></li>
+    }
+        
+
+
+</ul>
+<form class="frmSearch" action="/search" method="get">
+    <div class="flex">
+        <input type="text" name="keyword" id="txtKeyword" value="" placeholder="Nhập từ khóa tìm kiếm...">
+        <button class="btnSearch">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</form>
+
+
+

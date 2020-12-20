@@ -1,0 +1,189 @@
+﻿
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Untitled Document</title>
+    
+    
+    <!-- Stylesheets -->
+    
+    <!-- Owl Stylesheets -->
+    <link href="/Assets/Clinet/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Assets/Clinet/owlcarousel/docs.theme.min.css">
+    <link rel="stylesheet" href="/Assets/Clinet/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/Assets/Clinet/css/bootstrap.css">
+    <link href="/Assets/Clinet/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Assets/Clinet/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="/Assets/Clinet/css/bootstrap-reboot.css" rel="stylesheet" />
+
+    <link href="/Assets/Clinet/css/Untitled-2.css" rel="stylesheet" />
+    <link href="/Assets/Clinet/css/css-chodongho.css" rel="stylesheet" />
+    <link href="/Assets/Clinet/css/jquery-ui.css" rel="stylesheet" />
+
+ 
+</head>
+
+<body>
+    <div id="commonHead">
+        <div class="wrp">
+            @{Html.RenderAction("CommonTop", "Home");}
+        </div>
+    </div>
+    <div id="header">
+        @{ Html.RenderAction("MenuTop", "Home");}
+    </div>
+    @RenderBody()
+    <div id="subInfo">
+        <div class="wrp">
+            <div class="left">
+                <div class="item">
+                    <p class="head">HotLine</p>
+                    <a href="" class="tel">
+                        <span class="icon">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        <span class="text">1900.100có</span>
+                    </a>
+                </div>
+                <div class="item">
+                    <p class="head">Gọi đặt hàng</p>
+                    <a href="/" class="tel">
+                        <span class="icon">
+                            <i class="fa fa-phone"></i>
+                        </span>
+                        <span class="text">036855XXXX</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="right">
+                <div class="mail">
+                    <p class="fs17 ttu mb10">Đăng ký nhận thông tin mới</p>
+                    <div class="frmMail">
+                        <input type="text" value="" placeholder="Nhập email của bạn tại đây">
+                        <a href="/" title="" class="btnRegis">Đăng ký</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <p class="fs17 ttu mb10">Kết nối mạng xã hội</p>
+                    <ul>
+                        <li>
+                            <a rel="nofollow" href="/" title="Facebook" target="_blank">
+                                <i class="fa fa-facebook-official"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="/" title="Instagram" target="_blank">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="/" title="YouTobe" target="_blank">
+                                <i class="fa fa-youtube-play"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrp">
+            <div class="top">
+                <div class="left">
+                    <a href="/" title="" class="titleHead">Liên hệ</a>
+                    <div class="cont fs16">
+                        <b>Công ty cổ phần Chung AND Quý</b>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="icon">
+                                <i class="fa fa-map-marker"></i>
+                            </span>
+                            <span class="text">VPGD:Quảng Bình - Huế</span>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <i class="fa fa-phone-square"></i>
+                            </span>
+                            <a href="" title="Hotline" class="text">Hotline: 1800.100có</a>
+                        </li>
+                        <li>
+                            <span class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <a href="mailto:contact@dangquangwatch.vn" title="email" class="text">gmial.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mid">
+                    <div class="group">
+                        <a href="/" title="" class="titleHead">Hỗ trợ</a>
+                        <ol class="menuFoot">
+                            <li><a href="/" title="" class="text">Chính sách bảo hành</a></li>
+                            <li><a href="/" title="" class="text">Chính sách đổi hàng</a></li>
+                            <li><a href="/" title="" class="text">Chính sách bảo mật</a></li>
+                            <li><a href="/" title="" class="text">Chính sách vận chuyển</a></li>
+                            <li><a href="/" title="" class="text">Hướng dẫn thanh toán</a></li>
+                            <li><a href="/" title="" class="text">Hướng dẫn mua hàng</a></li>
+                        </ol>
+                    </div>
+                    <div class="group">
+                        <a href="/" title="" class="titleHead">Sản phẩm</a>
+                        <ul>
+                            <li><a href="/" title="" class="text">Đồng hồ chính hãng</a></li>
+                            <li><a href="/" title="" class="text">Kính mắt thời trang</a></li>
+                            <li><a href="/" title="" class="text">Dây đồng hồ</a></li>
+                            <li><a href="/" title="" class="text">Hộp đựng đồng hồ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="/" title="" class="titleHead active">Danh mục</a>
+                    <div class="tag" style="display: block">
+                        <a href="/" title="Cửa hàng">Hệ thống cửa hàng</a>
+                        <a href="/" title="">gốc hỏi đáp</a>
+                        <a href="/" title="tin tức">Tin tức</a>
+                        <a href="/" title="">Chứng nhận thương hiệu</a>
+                        <a href="/" title="About us">Giới thiệu</a>
+                    </div>
+                    <div class="dangky">
+                        <a rel="nofollow" href="/" title="BTC" target="_blank">
+                            <img src="/Assets/Clinet/image/bct2.png" alt="BCT">
+                        </a>
+                        <a rel="nofollow" href="/" title="BTC" target="_blank">
+                            <img src="/Assets/Clinet/image/bct.png" alt="BCT">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bot">
+                <p class="fRobotoB pb5 fs16">
+                    Chung Quý Watch
+                </p>
+                <h4 class="lh21">
+                    Nhà phân phối độc quyền các thương hiệu đồng hồ, kính mắt, bút ký nổi tiếng thế giới: Epos Swiss, Atlantic Swiss, Diamond D, Philippe Auguste, Jacques Lemans, Citizen, Aries Gold, dây da đồng hồ, dây đồng hồ đeo tay....
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="commonbot" style="background: #242424;color: #fff;padding: 18px 0px 30px 0px;">
+        <div class="wrp">
+            <div class="left">
+                Copyright © 2008-2020 Chung Quý Watch.
+            </div>
+        </div>
+    </div>
+    <!-- javascript -->
+    <script src="/Assets/Clinet/js/jquery-3.5.1.min.js"></script>
+
+    <script src="/Assets/Clinet/owlcarousel/owl.carousel.js"></script>
+
+
+    <script src="/Assets/Clinet/js/bootstrap.min.js"></script>
+
+    <script src="/Assets/Clinet/js/Controller/BaseController.js"></script>
+    @RenderSection("jsFooter", required: false)
+</body>
+</html>

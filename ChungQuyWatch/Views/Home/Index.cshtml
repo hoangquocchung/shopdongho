@@ -1,0 +1,467 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var slide = (List<KetNoiCSDL.EF.Slide>)ViewBag.Slides;
+    var listNewProduct = (List<KetNoiCSDL.ViewModel.ProductChiTiet>)ViewBag.NewProducts;
+    var listNewProductkinh = (List<KetNoiCSDL.ViewModel.ProductViewModel>)ViewBag.NewProductskinh;
+    var Sanpham = (List<KetNoiCSDL.EF.SanPham>)ViewBag.SellProducts;
+}
+@section jsFooter{
+    <script src="/Assets/Clinet/js/Untitled-1.js"></script>
+}
+<div id="slide">
+    <div class="owl-carousel owl-theme" id="my_carousel">
+        @foreach (var item in slide)
+        {
+            <div class="item">
+                <img src="@item.Image">
+            </div>
+        }
+    </div>
+</div>
+
+<div class="product">
+    <div class="wrp">
+        <a href="javascript://" title="" class="titleHead">Sản phẩm Mới</a>
+        <div id="tabs">
+            <ul class="nav nav-tabs" id="example-tabs" role="tablist">
+                <li class="nav-item">
+                    <a id="tab1" class="nav-link active" data-toggle="tab" role="tab" href="#pane-tab-1">Đông hồ bán chạy</a>
+                </li>
+                <li class="nav-item">
+                    <a id="tab2" class="nav-link" data-toggle="tab" role="tab" href="#pane-tab-2">Kính mắt thời trang</a>
+                </li>
+                <li class="nav-item">
+                    <a id="tab3" class="nav-link" data-toggle="tab" role="tab" href="#pane-tab-3">Phụ kiện đòng hồ</a>
+                </li>
+            </ul>
+            <!-- nội dung tab-->
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pane-tab-1" role="tabpanel" aria-labelledby="tab1">
+                    <div class="group slide owl-carousel owl-theme" id="my_carousel2">
+                        @foreach (var item in listNewProduct)
+                        {
+                            var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                            if (item.ParentID == 2)
+                            {
+                                if (item.PromotionPrice == null)
+                                {
+                                    <div class="item">
+                                        <div class="wImage">
+                                            <a href="@url" title="@item.Name" class="image">
+                                                <img src="@item.Image">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                            <a href="@url" title="@item.Name" class="name">
+                                                @item.Name
+                                            </a>
+                                            <div class="price">
+                                                <p class="new">
+                                                    @item.Price
+                                                </p>
+                                            </div>
+
+                                            <div class="count">
+                                                <div class="bg" style="width: 32%"></div>
+                                                <span class="text">Còn lại 131</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="item">
+                                        <div class="wImage">
+                                            <a href="@url" title="@item.Name" class="image">
+                                                <img src="@item.Image">
+                                            </a>
+                                            <span class="bot"> Giảm @item.sell %</span>
+                                        </div>
+                                        <div class="info">
+                                            <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                            <a href="@url" title="@item.Name" class="name">
+                                                @item.Name
+                                            </a>
+                                            <div class="price">
+
+                                                <p class="new">@item.PromotionPrice</p>
+                                                <p class="old">@item.Price</p>
+
+
+                                            </div>
+
+                                            <div class="count">
+                                                <div class="bg" style="width: 32%"></div>
+                                                <span class="text">Còn lại 131</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pane-tab-2" role="tabpanel" aria-labelledby="tab2">
+                    <div class="group slide owl-carousel owl-theme" id="my_carousel3">
+                        @foreach (var item in listNewProduct)
+                        {
+
+                            var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                            if (item.ParentID == 3)
+                            {
+                                if (item.PromotionPrice == null)
+                                {
+                                    <div class="item">
+                                        <div class="wImage">
+                                            <a href="@url" title="@item.Name" class="image">
+                                                <img src="@item.Image">
+                                            </a>
+                                        </div>
+                                        <div class="info">
+                                            <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                            <a href="@url" title="@item.Name" class="name">
+                                                @item.Name
+                                            </a>
+                                            <div class="price">
+                                                <p class="new">
+                                                    @item.Price
+                                                </p>
+                                            </div>
+
+                                            <div class="count">
+                                                <div class="bg" style="width: 32%"></div>
+                                                <span class="text">Còn lại 131</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="item">
+                                        <div class="wImage">
+                                            <a href="@url" title="@item.Name" class="image">
+                                                <img src="@item.Image">
+                                            </a>
+                                            <span class="bot"> Giảm @item.sell %</span>
+                                        </div>
+                                        <div class="info">
+                                            <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                            <a href="@url" title="@item.Name" class="name">
+                                                @item.Name
+                                            </a>
+                                            <div class="price">
+
+                                                <p class="new">@item.PromotionPrice</p>
+                                                <p class="old">@item.Price</p>
+
+
+                                            </div>
+
+                                            <div class="count">
+                                                <div class="bg" style="width: 32%"></div>
+                                                <span class="text">Còn lại 131</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pane-tab-3" role="tabpanel" aria-labelledby="tab3">
+                    <div class="group slide owl-carousel owl-theme" id="my_carousel4">
+                        @foreach (var item in listNewProduct)
+                        {
+
+                            var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                            if (item.ParentID == 4)
+                            {
+                                if (item.PromotionPrice == null)
+                                {
+                        <div class="item">
+                            <div class="wImage">
+                                <a href="@url" title="@item.Name" class="image">
+                                    <img src="@item.Image">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                <a href="@url" title="@item.Name" class="name">
+                                    @item.Name
+                                </a>
+                                <div class="price">
+                                    <p class="new">
+                                        @item.Price
+                                    </p>
+                                </div>
+
+                                <div class="count">
+                                    <div class="bg" style="width: 32%"></div>
+                                    <span class="text">Còn lại 131</span>
+                                </div>
+                            </div>
+                        </div>
+                                }
+                                else
+                                {
+                        <div class="item">
+                            <div class="wImage">
+                                <a href="@url" title="@item.Name" class="image">
+                                    <img src="@item.Image">
+                                </a>
+                                <span class="bot"> Giảm @item.sell %</span>
+                            </div>
+                            <div class="info">
+                                <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                <a href="@url" title="@item.Name" class="name">
+                                    @item.Name
+                                </a>
+                                <div class="price">
+
+                                    <p class="new">@item.PromotionPrice</p>
+                                    <p class="old">@item.Price</p>
+
+
+                                </div>
+
+                                <div class="count">
+                                    <div class="bg" style="width: 32%"></div>
+                                    <span class="text">Còn lại 131</span>
+                                </div>
+                            </div>
+                        </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product product2">
+    <div class="wrp">
+        <div class="left">
+            <a href="/" class="titleCate">Flash Sale</a>
+        </div>
+        <div class="right">
+            <div class="group slide2 owl-carousel owl-theme" id="my_carousel5">
+                @foreach (var item in listNewProduct)
+                {
+                    var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                    if (item.PromotionPrice != null)
+                    {
+                <div class="item">
+                    <div class="wImage">
+                        <a href="@url" title="@item.Name" class="image">
+                            <img src="@item.Image">
+                        </a>
+                        <span class="bot"> Giảm @item.sell %</span>
+                    </div>
+                    <div class="info">
+                        <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                        <a href="@url" title="@item.Name" class="name">
+                            @item.Name
+                        </a>
+                        <div class="price">
+
+                            <p class="new">@item.PromotionPrice</p>
+                            <p class="old">@item.Price</p>
+
+
+                        </div>
+
+                        <div class="count">
+                            <div class="bg" style="width: 32%"></div>
+                            <span class="text">Còn lại 131</span>
+                        </div>
+                    </div>
+                </div>
+                    }
+
+                }
+                @*<div class="item">
+                        <div class="wImage">
+                            <a href="#" title="" class="image">
+                                <img src="/Assets/Clinet/image/1456012083_dong-ho-diamond-d-DM38445IG.jpg">
+                            </a>
+                            <span class="bot"> Giảm 30%</span>
+                        </div>
+                        <div class="info">
+                            <p>27mm | 3ATM | Sapphire</p>
+                            <a href="#" title="" class="name">
+                                Đồng hồ Diamond D DM38445IG - Nữ
+                            </a>
+                            <div class="price">
+                                <p class="new">3.575.000 đ</p>
+                                <p class="old">5.190.000đ</p>
+                            </div>
+                            <div class="count">
+                                <div class="bg" style="width: 32%"></div>
+                                <span class="text">Còn lại 131</span>
+                            </div>
+                        </div>
+                    </div>*@
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product">
+    <div class="wrp">
+        <h2 class="titleCate">
+            <a href="/" title="">
+                <span class="icon">
+                    <img src="/Assets/Clinet/image/icon1.png">
+                </span>
+                Mắt kính thời trang
+            </a>
+        </h2>
+        <div class="group slide owl-carousel owl-theme" id="my_carousel6">
+            @foreach (var item in listNewProduct)
+            {
+
+                var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                if (item.ParentID == 3)
+                {
+                    if (item.PromotionPrice == null)
+                    {
+                        <div class="item">
+                            <div class="wImage">
+                                <a href="@url" title="@item.Name" class="image">
+                                    <img src="@item.Image">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                <a href="@url" title="@item.Name" class="name">
+                                    @item.Name
+                                </a>
+                                <div class="price">
+                                    <p class="new">
+                                        @item.Price
+                                    </p>
+                                </div>
+
+                                <div class="count">
+                                    <div class="bg" style="width: 32%"></div>
+                                    <span class="text">Còn lại 131</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+<div class="product product3">
+    <div class="wrp">
+        <div class="left">
+            <div class="wImage">
+                <a href="/" title="" class="image cover">
+                    <img src="/Assets/Clinet/image/EP246.jpg">
+                </a>
+            </div>
+            <h2 class="info">
+                <a href="/" title="" class="name">
+                    <span>Đồng hồ chính hãng</span>
+                    <span>Chất lượng cao</span>
+                </a>
+                <a href="/" title="" class="viewAll">
+                    Xem tất cả
+                    <i class="fa fa-chevron-circle-right"></i>
+                </a>
+            </h2>
+        </div>
+        <div class="group slide3 owl-carousel owl-theme" id="my_carousel7">
+            @foreach (var item in listNewProduct)
+            {
+
+                var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                if (item.ParentID == 2)
+                {
+                    if (item.PromotionPrice == null)
+                    {
+                        <div class="item">
+                            <div class="wImage">
+                                <a href="@url" title="@item.Name" class="image">
+                                    <img src="@item.Image">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                <a href="@url" title="@item.Name" class="name">
+                                    @item.Name
+                                </a>
+                                <div class="price">
+                                    <p class="new">
+                                        @item.Price
+                                    </p>
+                                </div>
+
+                                <div class="count">
+                                    <div class="bg" style="width: 32%"></div>
+                                    <span class="text">Còn lại 131</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+<div class="stv_barrie"></div>
+<div class="product">
+    <div class="wrp">
+        <h2 class="titleCate">
+            <a href="/" title="">
+                <span class="icon">
+                    <img src="/Assets/Clinet/image/icon1.png">
+                </span>
+                Phụ khiện đồng hồ
+            </a>
+        </h2>
+        <div class="group slide owl-carousel owl-theme" id="my_carousel8">
+            @foreach (var item in listNewProduct)
+            {
+
+                var url = "/chi-tiet/" + item.Metatitle + "-" + item.ID;
+                if (item.ParentID == 4)
+                {
+                    if (item.PromotionPrice == null)
+                    {
+                        <div class="item">
+                            <div class="wImage">
+                                <a href="@url" title="@item.Name" class="image">
+                                    <img src="@item.Image">
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p style="width: 216px;white-space: nowrap;overflow: hidden;">@item.DuongKinhMat | @item.DoChiuNuoc | @item.ChatLieuMat</p>
+                                <a href="@url" title="@item.Name" class="name">
+                                    @item.Name
+                                </a>
+                                <div class="price">
+                                    <p class="new">
+                                        @item.Price
+                                    </p>
+                                </div>
+
+                                <div class="count">
+                                    <div class="bg" style="width: 32%"></div>
+                                    <span class="text">Còn lại 131</span>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
+

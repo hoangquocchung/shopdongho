@@ -1,0 +1,245 @@
+﻿@model KetNoiCSDL.EF.SanPham
+@{
+    ViewBag.Title = "Detatil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var chitietsanpham = (KetNoiCSDL.EF.ChitietSanpham)ViewBag.ChiTietSanPham;
+    var sanphamlienquan = (List<KetNoiCSDL.EF.SanPham>)ViewBag.Sanphamlienquan;
+    var  category = (KetNoiCSDL.EF.DanhMucSanPham)ViewBag.Category;
+}
+
+<div id="pageway">
+    <div class="wrp">
+        <ul>
+            <li>
+                <a href="" title="">
+                    <b>Đồng hồ chính hãng</b>
+                </a>
+            </li>
+            <li>
+                <a href="" title="">
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="container">
+    <div id="product">
+        <div class="wrp">
+            <div class="nameCate lsh">
+                <a href="" title="">@category.Name - @chitietsanpham.KhieuDang</a>
+            </div>
+            <div class="detailPro">
+                <div class="top">
+                    <div class="left">
+                        <div class="imgSmall slick-initialized slick-slider slick-vertical">
+
+                        </div>
+                        <div class="imgLarge slick-initialized slick-slider">
+                            <i class="fa fa-chevron-circle-left slick-arrow"></i>
+                            <div class="slick-list draggable">
+                                <div class="slick-list draggable">
+
+                                </div>
+                            </div>
+                            <i class="fa fa-chevron-circle-right slick-arrow"></i>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <h1><a href="javascript://" title="" class="namePro">@Model.Name</a></h1>
+                        <div class="price">
+                            <div class="price1">
+                                <span class="text">Giá niêm yết</span>
+                                <span class="numb cc4161c">@Model.Price</span>
+                                <!--<span class="numb new dn dbtablet-l">4.530.000đ</span>-->
+                            </div>
+                            <div style="color: #3498db;">
+                                <span><i>Miễn phí vận chuyển!</i></span>
+                            </div>
+                        </div>
+                        <h3 class="descript">
+                            <div class="item">
+                                <span class="text">Đường kính mặt</span>
+                                <span class="num">@chitietsanpham.DuongKinhMat</span>
+                            </div>
+                            <div class="item">
+                                <span class="text">Độ chịu nước</span>
+                                <span class="num">@chitietsanpham.DoChiuNuoc</span>
+                            </div>
+                            <div class="item">
+                                <span class="text">Chất liệu mặt</span>
+                                <span class="num">@chitietsanpham.ChatLieuMat</span>
+                            </div>
+                            <div class="item">
+                                <span class="text">Năng lượng sử dụng</span>
+                                <span class="num">@chitietsanpham.nangLuong</span>
+                            </div>
+                        </h3>
+                        <div class="hotline">
+                            <span>Gọi đặt mua: </span>
+                            <a href="tel:18006005" title="18006005"><span class="icon"><i class="fa fa-phone"></i></span> 1800.6005</a>
+                            <span>(8:30 - 21:30)</span>
+                        </div>
+                        <div class="btnCart">
+                            <a href="/them-gio-hang?productId=@Model.ID&quantity=1" title="Add to cart" class="muangay">
+                                <span>Mua ngay</span>
+                                <span>Giao hàng miễn phí - Thanh toán tại nhà</span>
+                            </a>
+                            
+                            <a href="" title="" class="muatragop">
+                                <span>Trả góp 0% dễ dàng qua thẻ</span>
+                                <span>Visa, Master, JCB</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="detail">
+                        <div class="otherPro slideRes">
+                            <h3 class="title">Có thể bạn sẽ thích</h3>
+                            <div class="group">
+                                @foreach (var item in sanphamlienquan)
+                                {
+                                    var url = "/chi-tiet/" + item.MetaTitle + "-" + item.ID;
+                                    <div class="item">
+                                        <div class="wImage">
+                                            <a href="@url" title="" class="image">
+                                                <img data-src="https://www.dangquangwatch.vn/upload/product/2102500015_dong-ho-chinh-hang-7.jpg" alt="Đồng hồ Citizen CT-BJ6481-58A" class="lazy" src="@item.Image">
+                                            </a>
+                                        </div>
+                                        <h3 class="info">
+                                            <a href="@url" title="" class="name">
+                                                @item.Name
+                                            </a>
+                                            <div class="price">
+                                                <p class="new">@item.Price</p>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                }
+                                
+                                <div class="item">
+                                    <div class="wImage">
+                                        <a href="/sp/17389/dong-ho-citizen-ct-nh7510-50a.html" title="" class="image">
+                                            <img data-src="https://www.dangquangwatch.vn/upload/product/1490628201_DỒNG-HỒ-CHÍNH-HÃNG-17.jpg" alt="Đồng hồ Citizen CT-NH7510-50A" class="lazy" src="https://www.dangquangwatch.vn/upload/product/1490628201_DỒNG-HỒ-CHÍNH-HÃNG-17.jpg">
+                                        </a>
+                                    </div>
+                                    <h3 class="info">
+                                        <a href="/sp/17389/dong-ho-citizen-ct-nh7510-50a.html" title="" class="name">
+                                            Đồng hồ Citizen CT-NH7510-50A - Nam
+                                        </a>
+                                        <div class="price">
+                                            <p class="new">7.550.000 đ</p>
+                                        </div>
+                                    </h3>
+                                </div>
+                                <div class="item">
+                                    <div class="wImage">
+                                        <a href="/sp/17419/dong-ho-citizen-ct-bj6481-58e.html" title="" class="image">
+                                            <img data-src="https://www.dangquangwatch.vn/upload/product/1913526622_ĐỒNG-HỒ-CHĨNH-HÃNG-3.jpg" alt="Đồng hồ Citizen CT-BJ6481-58E" class="lazy" src="https://www.dangquangwatch.vn/upload/product/1913526622_ĐỒNG-HỒ-CHĨNH-HÃNG-3.jpg">
+                                        </a>
+                                    </div>
+                                    <h3 class="info">
+                                        <a href="/sp/17419/dong-ho-citizen-ct-bj6481-58e.html" title="" class="name">
+                                            Đồng hồ Citizen CT-BJ6481-58E - Nam
+                                        </a>
+                                        <div class="price">
+                                            <p class="new">7.410.000 đ</p>
+                                        </div>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detailRight">
+                        <div class="dntablet">
+                            <div class="thongsokythuat">
+                                <div class="titleR">Thông số kỹ thuật</div>
+                                <div class="group">
+                                    <div class="item">
+                                        <p class="text1">Đường kính mặt</p>
+                                        <p class="text2"><a href="javarscript://" title="">@chitietsanpham.DuongKinhMat</a></p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Chống nước</p>
+                                        <p class="text2"><a href="javarscript://" title="">@chitietsanpham.DoChiuNuoc</a></p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Chất liệu mặt</p>
+                                        <p class="text2">@chitietsanpham.ChatLieuMat</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Năng lượng sử dụng</p>
+                                        <p class="text2">@chitietsanpham.nangLuong</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Size dây</p>
+                                        <p class="text2">@chitietsanpham.SizeDay</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Chất liệu dây</p>
+                                        <p class="text2">@chitietsanpham.ChatLieuDay</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Kiểu dáng</p>
+                                        <p class="text2">Nam</p>
+                                    </div>
+                                    <div class="item">
+                                        <p class="text1">Xuất xứ</p>
+                                        <p class="text2">@chitietsanpham.XuatXu</p>
+                                    </div>
+                                    <!--<div class="item">
+                                        <p class="text1">Chế độ bảo hành</p>
+                                        <p class="text2">Bảo hành quốc tế <b>01</b> năm</p>
+                                    </div>-->
+
+                                </div>
+                            </div><div class="tuvanbanhang">
+                                <div class="titleR">Tư vấn bán hàng</div>
+                                <div class="group">
+                                    <a href="tel:0867515555" title="086.751.5555" class="item">
+                                        <img data-src="/view/css/icon/sale_phone.png" alt="" class="lazy" src="/Assets/Clinet/image/sale_phone.png">
+                                        <span class="text">
+                                            086.751.5555
+                                        </span>
+                                    </a>
+                                    <a href="tel:0865059090" title="086.505.9090" class="item">
+                                        <img alt="" class="lazy" src="/Assets/Clinet/image/sale_phone.png"/>
+                                        <span class="text">
+                                            086.505.9090
+                                        </span>
+                                    </a>
+                                    <a href="tel:0938669090" title="093.866.9090" class="item">
+                                        <img data-src="/view/css/icon/sale_phone.png" alt="" class="lazy" src="/Assets/Clinet/image/sale_phone.png">
+                                        <span class="text">
+                                            093.866.9090
+                                        </span>
+                                    </a>
+                                    <a href="tel:0986681189" title="098.668.1189" class="item">
+                                        <img data-src="/view/css/icon/sale_phone.png" alt="" class="lazy" src="/Assets/Clinet/image/sale_phone.png">
+                                        <span class="text">
+                                            098.668.1189
+                                        </span>
+                                    </a>
+                                    <a href="tel:0985681189" title="098.568.1189" class="item">
+                                        <img data-src="/view/css/icon/sale_phone.png" alt="" class="lazy" src="/Assets/Clinet/image/sale_phone.png">
+                                        <span class="text">
+                                            098.568.1189
+                                        </span>
+                                    </a>
+                                    <a href="tel:18006005" title="18006005" class="item">
+                                        <img data-src="/view/css/icon/sale_phone.png" alt="" class="lazy" src="/Assets/Clinet/image/sale_phone.png">
+                                        <span class="text">
+                                            1800.6005
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

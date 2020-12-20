@@ -1,0 +1,296 @@
+﻿@charset "utf-8";
+/* CSS Document */
+#container{
+    background: #e5e5e5;
+    padding-bottom:30px;
+}
+#product .wrp{
+    background:#fff;
+}
+#product .nameCate {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+#product .nameCate.lsh {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#product .nameCate .name {
+    display: inline-block;
+    border-left: 3px solid #4a90e2;
+    padding: 3px 0;
+    padding-left: 10px;
+    font-family: RobotoB;
+    font-size: 16px;
+}
+#product .detailPro .top, #product .detailPro .bot{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: flex-start;
+}
+#product .detailPro .top .left {
+    width: 595px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#product .detailPro .top .left .imgSmall {
+    width: 98px;
+    margin-bottom: -15px;
+    padding: 10px 0;
+}
+#product .detailPro .top .left .imgLarge {
+    width: calc(100% - 118px);
+}
+#product .detailPro .top .left .imgLarge .slick-arrow {
+    background: none;
+    border: none;
+    outline: none;
+    color: #e3e3e3;
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 5;
+    width: 35px;
+    height: 60px;
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    line-height: 60px;
+    border-radius: 0 4px 4px 0;
+    transition: 0.3s all ease-in-out;
+}
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+        width: 477px;
+    height: 477px;
+}
+#product .detailPro .top .right {
+    flex: 1;
+}
+#product .detailPro .top .right .namePro {
+    font-size: 23px;
+    display: block;
+    margin-bottom: 10px;
+}
+#product .detailPro .top .right .price {
+    background: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+#product .detailPro .top .right .price1 {
+    display: flex;
+    flex-direction: column;
+}
+#product .detailPro .top .right .price1 .text {
+    font-family: RobotoL;
+    line-height: 20px;
+    height: 20px;
+}
+#product .detailPro .top .right .price1 .numb {
+    font-size: 20px;
+    font-family: RobotoB;
+}
+.cc4161c {
+    color: #c4161c;
+}
+#product .detailPro .top .right .descript {
+    line-height: 19px;
+}
+#product .detailPro .top .right .descript {
+    display: flex;
+    margin: 12px 0 25px 0;
+}
+#product .detailPro .top .right .descript .item {
+    border-right: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 10px;
+}
+#product .detailPro .top .right .descript .item .text {
+    white-space: nowrap;
+}
+#product .detailPro .top .right .descript .item .num {
+    font-family: RobotoB;
+    margin-top: 2px;
+    text-align: center;
+}
+#product .detailPro .top .right .hotline {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 15px 0;
+}
+#product .detailPro .top .right .hotline a {
+    color: #3498db;
+    margin: 0 7px;
+}
+#product .detailPro .top .right .hotline a .icon {
+    padding-top: 4px;
+    text-align: center;
+}
+#product .detailPro .top .right .btnCart a {
+    border-radius: 3px;
+    flex: auto;
+    line-height: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    display: block;
+}
+#product .detailPro .top .right .btnCart a.muangay {
+    background: #2586d3;
+    color: #fff;
+}
+#product .detailPro .top .right .btnCart a span:first-child {
+    font-family: RobotoB;
+    text-transform: uppercase;
+}
+#product .detailPro .top .right .btnCart a span {
+    display: block;
+    text-align: center;
+}
+#product .detailPro .top .right .btnCart a.muatragop {
+    background: #fed700;
+    color: #000;
+    margin-bottom: 0;
+}
+#product .detailPro .top .right .btnCart a:last-child {
+    margin-right: 0;
+}
+#product .detailPro .top .right .btnCart a {
+    border-radius: 3px;
+    flex: auto;
+    line-height: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    display: block;
+}
+#product .detailPro .bot .detail {
+    flex: 1;
+    margin-right: 25px;
+}
+.otherPro {
+    width: 630px;
+    margin: auto;
+    margin-bottom: 35px;
+    max-width: 100%;
+}
+.otherPro .title {
+    font-size: 23px;
+    font-family: RobotoB;
+    text-align: center;
+    display: block;
+    margin-bottom: 15px;
+}
+.otherPro .group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.otherPro .group .item {
+    width: calc((100% - 100px) / 3);
+    margin-right: 33px;
+}
+.otherPro .group .item .wImage:before {
+    padding-bottom: 100%;
+}
+.otherPro .group .item .info {
+    margin-top: 10px;
+}
+.otherPro .group .item .info .name {
+    display: block;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.otherPro .group .item .info .price .new {
+    color: #cc0000;
+    font-family: RobotoB;
+    text-align: center;
+}
+
+
+
+#product .detailPro .bot .detailRight {
+    width: 375px;
+}
+.thongsokythuat {
+    margin-bottom: 25px;
+}
+.titleR {
+    text-transform: uppercase;
+    font-family: RobotoB;
+    display: block;
+    color: #000;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+.titleR:after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    background: #cd1818;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.thongsokythuat .group .item {
+    align-items: center;
+    display: flex;
+    padding: 7px;
+    border-bottom: 1px solid #eeeeee;
+}
+.thongsokythuat .group .item .text1 {
+    width: 135px;
+}
+.thongsokythuat .group .item .text2 {
+    flex: 1;
+    margin-left: 5px;
+}
+.thongsokythuat .group .item .text2 a {
+    color: #2899e2;
+}
+.tuvanbanhang {
+    margin-bottom: 25px;
+}
+.tuvanbanhang .group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tuvanbanhang .group .item {
+    width: calc((100% - 10px) / 2);
+    background: #fed700;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.tuvanbanhang .group .item img {
+    margin-right: 9px;
+}
+.tuvanbanhang .group .item .text {
+    font-family: RobotoB;
+    color: #000;
+    flex: 1;
+}

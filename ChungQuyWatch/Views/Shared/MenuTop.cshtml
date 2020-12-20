@@ -1,0 +1,36 @@
+﻿@model List<KetNoiCSDL.EF.DanhMucSanPham>
+<div class="wrp">
+    <a href="/" title="Home" class="logo">
+        <img src="/Assets/Clinet/image/Untitled-5.png" style="width: 250px;">
+    </a>
+    <div id="menuMain">
+        <ul>
+                @foreach (var item in Model.Where(x => x.ParentID == null))
+            {
+                var child = Model.Where(x => x.ParentID == item.ID);
+                var display = Model.Where(x => x.DisplayOrder == item.ID);
+                var parentClass = child.Count() > 0 ? "class=group" : "";
+                    <li>
+                        <a href="/san-pham/@item.MetaTiile" title="@item.Name">@item.Name</a>
+                        <ul>
+                            <li>
+                                <div class="subMenu">
+                                    <div class="group">
+
+                                        <div class="item">
+                                            @foreach (var ChildItem in child)
+                                            {
+                                                <a href="/san-pham/@ChildItem.MetaTiile" title="@ChildItem.Name">@ChildItem.Name</a>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                }
+        </ul>
+    </div>
+    @{Html.RenderAction("MenuTopRight", "Home");}
+</div>
+

@@ -1,0 +1,25 @@
+﻿@model List<ChungQuyWatch.Models.CartItem>
+<div class="right">
+    <a href="tel:18006005" title="Hotline" class="item">
+        <span class="icon">
+            <img data-src="/view/css/icon/hotline.png" alt="Hotline" class="lazy" src="/Assets/Clinet/image/hotline.png">
+        </span>
+        <span class="text">
+            <span class="top">Hotline</span>
+            <span class="bot">1800 6005</span>
+        </span>
+    </a>
+    <a href="/he-thong-cua-hang/" title="Showroom" class="item">
+        <span class="icon">
+            <img data-src="/Assets/Clinet/image/address.png" alt="Cua hang" class="lazy" src="/Assets/Clinet/image/address.png">
+        </span>
+        <span class="text">
+            <span class="top">Hệ thống</span>
+            <span class="bot">Cửa hàng</span>
+        </span>
+    </a>
+    <a href="javascript://" title="Cart" class="btnCart">
+        <i class="fa fa-shopping-cart"></i>
+        <span class="number">@Model.Count</span>
+    </a>
+</div>

@@ -1,0 +1,210 @@
+﻿@charset "utf-8";
+/* CSS Document */
+#container {
+    background: #e5e5e5;
+    padding-bottom: 30px;
+}
+.wrp{
+	margin: auto;
+	width: 1200px;
+}
+#product.cart {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 5px;
+}
+#product.cart .left {
+    width: 645px;
+    border-right: 5px solid #CCC;
+    padding-right: 20px;
+    margin-right: 25px;
+}
+.cart_header {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+#product.cart .tableCart {
+    border: 1px solid #cccccc;
+    border-left: none;
+    border-right: none;
+}
+#product.cart .tableCart .row {
+    -moz-transition: 0.3s all ease-in-out;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    transition: 0.3s all ease-in-out;
+}
+#product.cart .tableCart .row1 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#product.cart .tableCart .col {
+    box-sizing: border-box;
+    flex: 1;
+    min-height: 1px;
+    text-align: center;
+}
+#product.cart .tableCart .col1 {
+    box-sizing: border-box;
+    flex: none;
+    width: 100px;
+}
+#product.cart .tableCart .row1 .col {
+    padding: 0;
+}
+#product.cart .flex {
+    display: flex;
+}
+#product.cart .flex_1 {
+    flex: 1;
+}
+#product.cart .left .flex {
+    align-items: center;
+}
+#product.cart .tableCart .col2 {
+    flex: none;
+    text-align: left;
+    width: 200px;
+}
+#product.cart .tableCart .col6 {
+    flex: none;
+    width: 50px;
+}
+#product.cart .tableCart .row2 {
+    padding: 15px 0;
+}
+#product.cart .tableCart .row a {
+    -moz-transition: none;
+    line-height: 20px;
+    transition: none;
+}
+#product.cart .tableCart .col4 input {
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 34px;
+    padding: 0 10px;
+    width: 70px;
+}
+.dn {
+    display: none;
+}
+.pr4 {
+    padding-right: 4px;
+}
+#product.cart .tableCart .row3 {
+    align-items: center;
+    display: flex;
+    padding: 15px;
+}
+#product.cart .tableCart .row3 .lienhe {
+    display: block;
+    font-size: 14px;
+    line-height: 21px;
+    width: 60%;
+}
+#product.cart .tableCart .row3 .totalPrice {
+    flex: 1;
+    padding-left: 20px;
+    text-align: right;
+}
+#product.cart .tableCart .row3 .totalPrice {
+    flex: 1;
+    padding-left: 20px;
+    text-align: right;
+}
+#product.cart .tableCart .row3 .totalPrice > span {
+    color: red;
+    font-size: 24px;
+}
+#product.cart .tableCart .row3 .lienhe p a {
+    color: red;
+    font-size: 16px;
+}
+#product.cart .tableCart .row a {
+    -moz-transition: none;
+    line-height: 20px;
+    transition: none;
+}
+.tac {
+    text-align: center;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.ttu {
+    text-transform: uppercase;
+}
+.fs20 {
+    font-size: 20px;
+}
+#product.cart .tableCart .row:last-child {
+    border-bottom: none;
+}
+#product.cart .infoDatHang .group .form .item {
+    align-items: center;
+    display: flex;
+    margin-bottom: 12px;
+}
+#product.cart .infoDatHang .group .form .item .label {
+    width: 100px;
+}
+.cRed {
+    color: #f00;
+}
+#product.cart .infoDatHang .group .form .item input, #product.cart .infoDatHang .group .form textarea {
+    background: #efefef;
+    border: 1px solid #cdcdcd;
+    flex: 1;
+    font-size: 14px;
+    height: 34px;
+    padding: 0 10px;
+    padding-left: 10px;
+    resize: none;
+}
+.h10 {
+    height: 10px;
+}
+.cb {
+    clear: both;
+}
+.btnThanhToan {
+    margin-bottom: 10px;
+    margin-top: 0;
+    width: 100%;
+}
+.tragop, .btnThanhToan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 100%;
+}
+.btnThanhToan button:first-child {
+    background: -webkit-linear-gradient(top, #f59000, #fd6e1d);
+    background: -moz-linear-gradient(top, #f59000, #fd6e1d);
+    background: -ms-linear-gradient(top, #f59000, #fd6e1d);
+}
+.tragop button, .btnMuaNgay2, .btnThanhToan button {
+    background: #0e74c2;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0e74c2), to(#288ad6));
+    background: -webkit-linear-gradient(top, #288ad6, #0e74c2);
+    background: -moz-linear-gradient(top, #288ad6, #0e74c2);
+    background: -ms-linear-gradient(top, #288ad6, #0e74c2);
+    background: -o-linear-gradient(top, #288ad6, #0e74c2);
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 20px;
+    outline: none;
+    padding: 8px 0;
+    transition: 0.3s all ease-in-out;
+    width: calc((100% - 5px) / 2);
+}
+
